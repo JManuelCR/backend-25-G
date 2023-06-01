@@ -21,7 +21,22 @@ fs.readFile("./hola.txt", 'utf8', (err, data) => {
 //     console.log('The file has been saved!');
 // })
 
-fs.appendFile("./hola.txt", "\nUna prueba nueva de lo que se tiene que ver\nen el archivo para saber que si lo esta modificando", 'utf8', (err) => {
+// fs.appendFile("./hola.txt", "\nUna prueba nueva de lo que se tiene que ver\nen el archivo para saber que si lo esta modificando", 'utf8', (err) => {
+//     if (err) throw err;
+//     console.log('The file has been saved!');
+// })
+
+// fs.unlink("./hola.txt", (err) => {
+//     if (err) throw err;
+//     console.log('path/hola.txt was deleted');
+// })
+
+// fs.copyFile("./hola.txt", "./newFolder/newFile.txt", (err) => {
+//     if(err) throw err;
+//     console.log("File was copied");
+// })
+
+fs.mkdir("./newFolder/otherFolder", {recursive: true}, (err) => {
     if (err) throw err;
-    console.log('The file has been saved!');
+    console.log("Folder created successfully");
 })
