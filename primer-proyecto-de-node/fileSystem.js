@@ -16,7 +16,12 @@ fs.readFile("./hola.txt", 'utf8', (err, data) => {
 })
 
 
-fs.writeFile("./hola.txt", "Este es un nuevo texto contenido en el mismo archivo", 'utf8', (err) => {
+// fs.writeFile("./hola.txt", "Una nueva prueba de lo que se esta ecribiendo en el archvo a modificar", 'utf8', (err) => {
+//     if (err) throw err;
+//     console.log('The file has been saved!');
+// })
+
+fs.appendFile("./hola.txt", "Una nueva prueba de lo que se esta ecribiendo en el archvo a modificar", 'utf8', (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
 })
