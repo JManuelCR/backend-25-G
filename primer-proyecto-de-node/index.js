@@ -1,4 +1,4 @@
-const argv = require('yargs-parser')
+const argv = require('yargs-parser')(process.argv.slice(2));
 const colors = require('colors');
  
 
@@ -30,4 +30,4 @@ const findNombre = (names, name) => {
 
 }
 
-console.log(findNombre(names, process.argv.nombre));
+console.log(findNombre(names, argv.nombre));
