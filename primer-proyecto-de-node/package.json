@@ -1,0 +1,22 @@
+{
+  "name": "primer-proyecto-de-node",
+  "version": "1.0.0",
+  "description": "Mi primer proyecto de Node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "echo 'estamos en modo desarrollo'"
+  },
+  "keywords": [
+    "kodemia",
+    "Node",
+    "Backend",
+    "Json"
+  ],
+  "author": "ManuelCR",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "yargs-parser": "^21.1.1"
+  }
+}
