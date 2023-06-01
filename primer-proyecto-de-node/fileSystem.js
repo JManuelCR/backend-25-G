@@ -21,7 +21,7 @@ fs.readFile("./hola.txt", 'utf8', (err, data) => {
 //     console.log('The file has been saved!');
 // })
 
-fs.appendFile("./hola.txt", "Una nueva prueba de lo que se esta ecribiendo en el archvo a modificar", 'utf8', (err) => {
+fs.appendFile("./hola.txt", "\nUna prueba nueva de lo que se tiene que ver\nen el archivo para saber que si lo esta modificando", 'utf8', (err) => {
     if (err) throw err;
     console.log('The file has been saved!');
 })
