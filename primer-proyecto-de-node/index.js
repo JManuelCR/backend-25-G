@@ -23,11 +23,8 @@ const names = [
     "Samantha"
 ]
 const findNombre = (names, name) => {
-    console.log(name);
     let finded = names.find(element => element === name) !== undefined;
     finded ? console.log(`Bienvenido ${name}`.rainbow) : console.log(`Fuera de aqui`.red);
-    return; 
-
 }
 
 console.log(findNombre(names, argv.nombre));

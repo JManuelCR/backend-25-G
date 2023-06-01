@@ -143,3 +143,16 @@ Este es el objeto process de Node
 
 ## COdigo node para instalar el node modules y jpackagejso-lock
     npm install
+
+# File system
+
+Sistema de archivos que empiezan desde la raiz y no hay nada detras de la raiz de ese sistema de archivos
+
+## Callback
+Son funciones que se pasa como parametro en otra funcion se pasan como referencia
+
+## modulo de file system
+fs ya esta integrado en node y los podemos encontrar en la documentacion de node, en la seccion de devs o la de docs para dirigirnos en ella y ver de que se trata esa herramoenta.
+Nos vamos a la izquierda y nos dirigimos a la version en la que estamos trabajando, en este caso la de node 16
+Buscar en el listado el file system para hacer un sistema de archivos
+Dentro de esta documentacion tenemos la callback APi, una para empezar es la de leer un archivo
