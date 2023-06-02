@@ -104,7 +104,7 @@ const hornearElPastel = (masaPreparada, prepararLaCubierta) => {
     setTimeout(() => {
         masaPreparada.seHorneaLaMasa = true;
         if(!masaPreparada.seHorneaLaMasa){
-            console.log("la masa necesita ser horneada primero");
+            error = ("la masa necesita ser horneada primero");
         };
         prepararLaCubierta(error, masaPreparada)
     }, 5000);
@@ -115,7 +115,7 @@ const prepararElRecubrimiento = (pastelHorneado, recubirElPastel) => {
     setTimeout(() => {
         pastelHorneado.sePreparaLacubierta = true;
         if(!pastelHorneado.sePreparaLacubierta){
-            console.log("La cubierta necesita ser preparada primero");
+            error = ("La cubierta necesita ser preparada primero");
         };
         recubirElPastel(error, pastelHorneado);
     }, 4000);
@@ -124,9 +124,9 @@ const prepararElRecubrimiento = (pastelHorneado, recubirElPastel) => {
 const decorarElPastel = (cubiertaPreparada, refrigerar) => {
     let error = null;
     setTimeout(()=>{
-        cubiertaPreparada.decorarElPastel = true;
+        cubiertaPreparada.decorarElPastel = false;
         if(!cubiertaPreparada.decorarElPastel){
-            console.log("El pastel necesita ser decorado si no es solo un panque");
+            error = ("El pastel necesita ser decorado si no es solo un panque, decoralo primero");
         };
         refrigerar(error, cubiertaPreparada);
 
