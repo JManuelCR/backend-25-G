@@ -1,19 +1,19 @@
 const fs = require("fs");
 console.log("readFile", fs.readFile);
 
-fs.readFile("./hola.txt", 'utf8', (err, data) => {
+// fs.readFile("./hola.txt", 'utf8', (err, data) => {
     
-    // dentro de la callback
-    // si hay error
-    if(err){
-        console.log(err);
-        return;
-    }
+//     // dentro de la callback
+//     // si hay error
+//     if(err){
+//         console.log(err);
+//         return;
+//     }
 
-    // si leyo bien el contenido
-    console.log("Data", data);
+//     // si leyo bien el contenido
+//     console.log("Data", data);
 
-})
+// })
 
 
 // fs.writeFile("./hola.txt", "Una nueva prueba de lo que se esta ecribiendo en el archvo a modificar", 'utf8', (err) => {
@@ -36,7 +36,24 @@ fs.readFile("./hola.txt", 'utf8', (err, data) => {
 //     console.log("File was copied");
 // })
 
-fs.mkdir("./newFolder/otherFolder", {recursive: true}, (err) => {
-    if (err) throw err;
-    console.log("Folder created successfully");
-})
+// fs.mkdir("./newFolder/otherFolder", {recursive: true}, (err) => {
+//     if (err) throw err;
+//     console.log("Folder created successfully");
+// })
+
+// const leerArchivo = (archivo) => {
+//     fs.readFile(`newFolder/${archivo}`, 'utf8', (err, data) => {
+//         if(err){
+//             console.log(err);
+//             return;
+//         }
+//         console.log("Data", data);  
+//     })
+// }
+
+// fs.readdir("newFolder/", 'utf8', (err, files) => {
+//     if (err) throw err;
+//     files.forEach(element => {
+//         leerArchivo(element)
+//     });
+// })
