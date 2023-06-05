@@ -21,9 +21,12 @@
 const pastel = {
     leerReceta: false,
     conseguirIngridientes: false,
-    prepararMasa: false
-}
-
+    prepararMasa: false,
+    hornearLaMasa: false,
+    prepararLaDecoracion: false,
+    decorarElPastel: false,
+    refrigerar: false
+};
 const leerReceta = (pastel) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -37,8 +40,7 @@ const leerReceta = (pastel) => {
             resolve(pastel)
         }, 3000);
     })
-}
-
+};
 const conseguirIngridientes = (pastelLeido) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -49,7 +51,7 @@ const conseguirIngridientes = (pastelLeido) => {
             resolve(pastelLeido)
         }, 2000)
     })
-}
+};
 const prepararLaMasa = (prepararMasa) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -60,7 +62,51 @@ const prepararLaMasa = (prepararMasa) => {
             resolve(prepararMasa)
         }, 3000)
     })
+};
+const hornearPastel = (hornearLaMasa) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(()=> {
+            hornearLaMasa.hornearLaMasa = true;
+            if(!hornearLaMasa){
+                reject("Tienes que hornear la masa primero antes de continuar con el pastel")
+            }
+            resolve(hornearLaMasa)
+        }, 1000)
+    })
+};
+const prepararLaDecoracion = (prepararDecoracion) => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            prepararDecoracion.prepararLaDecoracion = true;
+            if(!prepararDecoracion){
+                reject("Si va a ser un pastel tienes que decorarlo de lo contrario sera un panque, primero prepara la decoracion");
+            }
+            resolve(prepararDecoracion);
+        },2000);
+    });
+};
+const decorarPastel = (decorarElPastel) => {
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            decorarElPastel.decorarElPastel = true;
+            if(!decorarElPastel){
+                reject("Decora el pastel con la decoracion que hiciste");
+            }
+            resolve(decorarElPastel);
+        }, 3000)
+    })
 }
+const refrigerar = (refrigerar) => {
+    return new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            refrigerar.refrigerar = true;
+            if(!refrigerar){
+                reject("HAy que meter al refri el pastel para que tenga consistencia");
+            }
+            resolve(refrigerar);
+        }, 1000);
+    });
+};
 // const promesa = leerReceta(pastel);
 // console.log("Promesa >>>>>>>>", promesa);
 
@@ -72,8 +118,36 @@ leerReceta(pastel)
      .then((pastelConIngredientes) => {
         console.log("Ingredientes conseguidos", pastelConIngredientes);
         prepararLaMasa(pastelConIngredientes)
-         .then((prepararMasa) => {
-            console.log("La masa ha sido preparada", prepararMasa);
+         .then((prepararMasaLista) => {
+            console.log("La masa ha sido preparada", prepararMasaLista);
+            hornearPastel(prepararMasaLista)
+             .then((hornearLaMasa) => {
+                console.log("La masa ha sido horneada", hornearLaMasa)
+                prepararLaDecoracion(hornearLaMasa)
+                 .then((decoracionPreparada) => {
+                    console.log("La decoracion ha sido preparada", decoracionPreparada)
+                    decorarPastel(decoracionPreparada)
+                     .then((decorar) => {
+                        console.log("El pastel ha sido decorado y se ve muy bien", decorar)
+                        refrigerar(decorar)
+                        .then((refrigerar) => {
+                            console.log("El pastel ya esta en el refrigerador", refrigerar)
+                        })
+                        .catch((error) => {
+                            console.log(error)
+                        })
+                     })
+                     .catch((error) => {
+                        console.log(error)
+                     })
+                 })
+                 .catch((error) => {
+                    console.log(error);
+                 })
+             })
+             .catch((error) => {
+                console.log(error);
+             })
          })
          .catch((error) => {
             console.log("error", error);
