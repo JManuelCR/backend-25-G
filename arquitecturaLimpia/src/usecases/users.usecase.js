@@ -45,5 +45,15 @@ const creater = (data) => {
     //crear la cuente
 }
 
-module.exports = { create, login }
+const list = () => {
+    const users = User.find(filters);
+    return users;
+}
+
+const get = (id => {
+    const user = User.findById(id);
+    if(!user)throw createError(404, "User with that id nor found")
+    return user
+})
+module.exports = { create, login, list, get  }
 

@@ -16,7 +16,7 @@ mongoose.connect(dataBaseURL)
 .then(()=> {
     console.log("Conexion a la base de datos exitosa");
     app.listen(3000, () => {
-        console.log("Mi servidor esta levantedo"); 
+        console.log("Mi servidor esta levantado"); 
     });
 })
 .catch((err) => {
@@ -116,6 +116,11 @@ app.post("/koders", async (req, res) => {
 
 /**
  * Enpoint donde podemos encontrar un koder por su id
+ * /recurso/identificador
+ * methood
+ * rute
+ * MOdel, findById
+ * 
  */
 
 app.get("/koders/:id", async (req, res) => {
@@ -142,18 +147,25 @@ app.get("/koders/:id", async (req, res) => {
 app.delete("/koders/:id", async (req, res) => {
     const { id } = req.params;
     try{
-        const deleteKoder = await  Koder.findById(id);
-        res.status(200);
-        res.json({
+        const deleteKoder = await  Koder.findByIdAndDelete(id);
+        console.log(deleteKoder);
+        let status = 200;
+        const responseParams = {
             success: true,
-            data: "El koder fue eleimnado"
-        })
+            message: "El koder fue eliminado exitosamente",
+        }
+        if(!deleteKoder){
+            responseParams.success = false;
+            responseParams.message = "EL koder no fue encontrado";
+            status = 404
+        }
+        res.status(status)
+        res.json(responseParams)
     }catch(err){
         res.status(400);
-        res,json({
+        res.json({
             success: false,
             message: err.message
         })
     }
-
 })
