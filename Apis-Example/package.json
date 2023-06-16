@@ -1,0 +1,19 @@
+{
+  "name": "apis-example",
+  "version": "1.0.0",
+  "description": "Conjunto de funciones y procedimientos que cumplen una o muchas funciones con el fin de ser utilizados por un software.",
+  "main": "index.js",
+  "scripts": {
+    "api-express": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

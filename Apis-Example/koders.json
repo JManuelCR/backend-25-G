@@ -1,0 +1,100 @@
+{
+  "mentors": [
+    {
+      "name": "Ale",
+      "age": 27,
+      "module": "backend",
+      "isActive": "true"
+    },
+    {
+      "name": "Israel",
+      "age": 31,
+      "module": "javascript",
+      "isActive": "true"
+    },
+    {
+      "name": "Gustavo",
+      "age": 25,
+      "module": "GitHub",
+      "isActive": "false"
+    },
+    {
+      "name": "Fernando",
+      "age": 26,
+      "module": "Maquetado",
+      "isActive": "true"
+    }
+  ],
+  "koders": [
+    {
+      "id": 4,
+      "name": "Paola",
+      "age": "30",
+      "module": "React",
+      "generation": "25Js"
+    },
+    {
+      "id": 6,
+      "name": "Sam",
+      "age": "28",
+      "module": "Backend",
+      "generation": "25Js"
+    },
+    {
+      "id": 7,
+      "name": "Karla",
+      "age": "25",
+      "module": "Javascript",
+      "generation": "25Js"
+    },
+    {
+      "id": 8,
+      "name": "Andres de Anda",
+      "age": "27",
+      "module": "Backend",
+      "generation": "25Js"
+    },
+    {
+      "id": 9,
+      "name": "Andres Garcia",
+      "age": "25",
+      "module": "Javascript",
+      "generation": "25Js"
+    },
+    {
+      "id": 10,
+      "name": "Angel",
+      "age": "27",
+      "module": "React",
+      "generation": "25Js"
+    },
+    {
+      "id": 11,
+      "name": "Luis",
+      "age": "29",
+      "module": "Backend",
+      "generation": "25Js"
+    },
+    {
+      "id": 12,
+      "name": "Jorge",
+      "age": "31",
+      "module": "React",
+      "generation": "25Js"
+    },
+    {
+      "id": 13,
+      "name": "Max",
+      "age": 29,
+      "module": "React",
+      "generation": "25Js"
+    },
+    {
+      "id": 14,
+      "name": "Daniel",
+      "age": 27,
+      "module": "React",
+      "generation": "25Js"
+    }
+  ]
+}
